@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NgFor, NgIf, NgSwitch, NgSwitchCase, NgSwitchDefault } from '@angular/common';
+import { HttpRequestComponent } from '../data.service/http-request.component';
 
 @Component({
   standalone: true,
@@ -10,8 +11,14 @@ import { NgFor, NgIf, NgSwitch, NgSwitchCase, NgSwitchDefault } from '@angular/c
     NgSwitch,
     NgSwitchCase,
     NgSwitchDefault,
-    NgFor
-  ]
+    NgFor,
+  ],
+  template: `
+  <div>
+    <h2>Control Flow Component</h2>
+    <!-- <app-http-request></app-http-request> -->
+  </div>
+`,
 })
 export class ControlFlowComponent {
     bestClub: boolean = true;
