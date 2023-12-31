@@ -1,3 +1,12 @@
+
+<div>
+    <button (click)="sendHttpRequest()">Send HTTP Request</button>
+    <div *ngIf="responseData">{{ responseData | json }}</div>
+  </div>
+  
+
+
+<!-- 
 <div>
   <h2>Control Flow Component</h2>
   <app-http-request></app-http-request>
@@ -42,4 +51,4 @@
 
 @for (club of clubs; track $index) {
 <li>{{ club }}</li>
-}
+} -->
