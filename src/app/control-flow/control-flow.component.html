@@ -1,0 +1,45 @@
+<div *ngIf="bestClub; else elseTemplate">Real madrid</div>
+<ng-template #elseTemplate>
+  <div>Barcelona</div>
+</ng-template>
+
+@if(bestClub){
+<div>Real Madrid</div>
+}@else{
+<div>Barcelona</div>
+}
+
+<button (click)="bestClub = !bestClub">Toggle</button>
+
+<div [ngSwitch]="clubName">
+  <div *ngSwitchCase="'real'">Real</div>
+  <div *ngSwitchCase="'barca'">Barca</div>
+  <div *ngSwitchCase="'milan'">Milan</div>
+  <div *ngSwitchDefault>'Default'</div>
+</div>
+@switch (clubName) {
+    @case ('real') {
+        <div>real</div>
+      }
+      @case ('barca') {
+        <div>real</div>
+      }
+      @case ('milan') {
+        <div>real</div>
+      }
+@default {
+  <div>Default</div>
+}
+}
+
+<button (click)="clubName = 'barca'">Barca</button>
+<button (click)="clubName = 'real'">Real</button>
+<button (click)="clubName = 'milan'">Milan</button>
+
+<ul>
+    <li *ngFor="let club of clubs">{{club}}</li>
+</ul>
+
+@for (club of clubs; track $index) {
+  <li>{{club}} </li>
+}

@@ -3,8 +3,6 @@ import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { ControlFlowComponent } from './control-flow/control-flow-component';
 
-
-
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -13,5 +11,5 @@ import { ControlFlowComponent } from './control-flow/control-flow-component';
   styleUrl: './app.component.scss',
 })
 export class AppComponent {
-  title: string = 'exercise';
+
 }
